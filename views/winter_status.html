@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Winter</title>
+  <meta http-equiv="refresh" content="15" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+        body{
+            background: rgb(126,125,125);
+            background: radial-gradient(circle, rgba(126,125,125,1) 3%, rgba(0,0,0,1) 100%);
+            min-height:100vh;
+            text-align: center;
+        }
+
+        .weater-title{
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .water-status{
+            font-size: 150px;
+            color: white;
+            font-weight: bold;
+        }
+  </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 30vh;">
+        <div class="row align-self-center w-99">
+            <div class="col-6 mx-auto">
+                <div class="">
+                    <p class="weater-title"> Current Weater Status</p>
+                    <h1 class="water-status">{{ .Status }}</h1>
+                    <p class="lead">
+                        <a class="btn btn-warning btn-md">Water : {{ .Water }} m</a> <a class="btn btn-success btn-md">Wind : {{ .Wind }} m/s</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
